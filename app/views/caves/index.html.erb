@@ -1,2 +1,14 @@
-<h1>Caves#index</h1>
-<p>Find me in app/views/caves/index.html.erb</p>
+<h1>Daum Cafe Rankings</h1>
+<h2>ᕙ(๑ ⚈ै‿ ⚈ै๑)ᕗ</h2>
+
+<%= will_paginate @top %>
+<% @top.each do |cafe| %>
+<ol>
+  <li>
+    <a href="<%=cafe.url%>"><%=cafe.title%> | </a>
+    <p>Members: <%=cafe.score%></p>
+  </li>
+
+</ol>
+<% end %>
+<%= will_paginate @top %>
