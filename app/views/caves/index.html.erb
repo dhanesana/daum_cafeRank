@@ -8,7 +8,7 @@
 <% @top.each do |cafe| %>
   <li>
     <a href="<%=cafe.url%>"><%=cafe.title%></a>
-    <span>Members: <%=cafe.score%></span>
+    <span>Members: <%=cafe.score.to_i.to_s.chars.to_a.reverse.each_slice(3).map(&:join).join(",").reverse%></span>
   </li>
 
 <% end %>
