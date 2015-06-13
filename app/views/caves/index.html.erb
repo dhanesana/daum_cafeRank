@@ -1,14 +1,17 @@
-<h1>Daum Cafe Rankings</h1>
 <h2>ᕙ(๑ ⚈ै‿ ⚈ै๑)ᕗ</h2>
+<h1>Daum Cafe Rankings</h1>
+<hr>
 
+<ol>
 <%= will_paginate @top %>
+<p></p>
 <% @top.each do |cafe| %>
-<ul>
   <li>
     <a href="<%=cafe.url%>"><%=cafe.title%></a>
-    <p>Members: <%=cafe.score%></p>
+    <span>Members: <%=cafe.score%></span>
   </li>
 
-</ul>
 <% end %>
 <%= will_paginate @top %>
+</ol>
+<p></p>

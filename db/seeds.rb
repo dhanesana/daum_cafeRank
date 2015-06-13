@@ -2,7 +2,7 @@ require 'open-uri'
 
 page_num = 1
 
-while page_num < 101 # First 100 Pages
+while page_num < 501 # First 500 Pages
   item_num = 0
   page = Nokogiri::HTML(open("http://top.cafe.daum.net/_c21_/category_list?type=sub&page=#{page_num}&subcateid=85&cateid=5"))
   while item_num < 15
