@@ -3,12 +3,12 @@
 
 <%= will_paginate @top %>
 <% @top.each do |cafe| %>
-<ol>
+<ul>
   <li>
-    <a href="<%=cafe.url%>"><%=cafe.title%> | </a>
+    <a href="<%=cafe.url%>"><%=cafe.title%></a>
     <p>Members: <%=cafe.score%></p>
   </li>
 
-</ol>
+</ul>
 <% end %>
 <%= will_paginate @top %>
