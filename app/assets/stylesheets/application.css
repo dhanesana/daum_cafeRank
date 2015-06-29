@@ -18,15 +18,21 @@ h1, h2 {
   text-align: center;
 }
 
-ol {
+table, th, td {
+  width: 25%;
+  margin: 1em auto;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+}
+
+#updated {
   text-align: center;
 }
 
-li {
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-
-p {
+.paginate {
   text-align: center;
 }
