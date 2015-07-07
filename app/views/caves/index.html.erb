@@ -1,29 +1,44 @@
-<h2>ᕙ(๑ ⚈ै‿ ⚈ै๑)ᕗ</h2>
-<h1>Daum Fan Cafe Rankings</h1>
-<p id='updated'>Last updated: <%=@top.first.updated_at%></p>
+<section id='header'>
+  <h2>ᕙ(๑ ⚈ै‿ ⚈ै๑)ᕗ</h2>
+  <h1>Daum Fan Cafe Rankings</h1>
+  <p id='updated'>Last updated: <%= @top.first.updated_at.strftime("%Y-%m-%d %I:%m%p %Z") %></p>
+</section>
+
 <hr>
 
-<div class='paginate'>
-  <%= will_paginate @top %>
-</div>
+<section id='main'>
+  <div class='paginate'>
+    <%= will_paginate @top %>
+  </div>
 
-<table>
-  <tr>
-    <th>Cafe Name</th>
-    <th>Members</th>
-  </tr>
-<% @top.each do |cafe| %>
-  <tr>
-    <td>
-      <a href="<%=cafe.url%>" target="_blank"><%=cafe.title%></a>
-    </td>
-    <td>
-      <%=cafe.score.to_i.to_s.chars.to_a.reverse.each_slice(3).map(&:join).join(",").reverse%>
-    </td>
-  </tr>
-<% end %>
-</table>
+  <table>
+    <tr>
+      <th>Cafe Name</th>
+      <th>Members</th>
+    </tr>
+  <% @top.each do |cafe| %>
+    <tr>
+      <td>
+        <a href="<%= cafe.url %>" target="_blank"><%= cafe.title %></a>
+      </td>
+      <td class='scores'>
+        <% if cafe.score.to_i >= 5 %>
+          <%= cafe.score.to_i.to_s.chars.to_a.reverse.each_slice(3).map(&:join).join(",").reverse %>
+        <% else %>
+          <%= "< 5" %>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+  </table>
 
-<div class='paginate'>
-  <%= will_paginate @top %>
-</div>
+  <div class='paginate'>
+    <%= will_paginate @top %>
+  </div>
+</section>
+
+<hr>
+
+<section id='footer'>
+  <p>YongChicken 2015</p>
+</section>

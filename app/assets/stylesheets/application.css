@@ -14,15 +14,20 @@
  *= require_self
  */
 
+body {
+  font-family: Helvetica, Arial;
+}
+
 h1, h2 {
   text-align: center;
 }
 
 table, th, td {
   width: 25%;
-  margin: 1em auto;
-  border: 1px solid black;
+  margin: 0.5em auto;
+  border: 1px solid #7A7A7A;
   border-collapse: collapse;
+  background-color: white;
 }
 
 th, td {
@@ -34,5 +39,23 @@ th, td {
 }
 
 .paginate {
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+  padding-bottom: 0.5em;
+}
+
+.scores {
+  text-align: center;
+}
+
+#main {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: url(http://i.imgur.com/OdlBKxC.gif) repeat top left scroll;
+}
+
+#footer {
   text-align: center;
 }
