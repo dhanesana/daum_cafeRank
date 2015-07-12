@@ -4,22 +4,20 @@
   <p id='updated'>Last updated: <%= @top.first.updated_at.strftime("%Y-%m-%d %I:%m%p %Z") %></p>
 </section>
 
-<hr>
-
 <section id='main'>
   <div class='paginate'>
     <%= will_paginate @top %>
   </div>
 
-  <table>
+  <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
     <tr>
-      <th>Cafe Name</th>
+      <th class="mdl-data-table__cell--non-numeric">Cafe Name</th>
       <th>Members</th>
     </tr>
   <% @top.each do |cafe| %>
     <tr>
-      <td>
-        <a href="<%= cafe.url %>" target="_blank"><%= cafe.title %></a>
+      <td class="mdl-data-table__cell--non-numeric">
+        <a class="cafe-urls" href="<%= cafe.url %>" target="_blank"><%= cafe.title %></a>
       </td>
       <td class='scores'>
         <% if cafe.score.to_i >= 5 %>
