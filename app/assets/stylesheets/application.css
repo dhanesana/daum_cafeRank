@@ -11,11 +11,13 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require material
  *= require_self
  */
 
 body {
   font-family: Helvetica, Arial;
+  background-color: #ECEFF1;
 }
 
 h1, h2 {
@@ -23,15 +25,7 @@ h1, h2 {
 }
 
 table, th, td {
-  width: 25%;
   margin: 0.5em auto;
-  border: 1px solid #7A7A7A;
-  border-collapse: collapse;
-  background-color: white;
-}
-
-th, td {
-  padding: 10px;
 }
 
 #updated {
@@ -43,6 +37,7 @@ th, td {
   text-align: center;
   background-color: white;
   padding-bottom: 0.5em;
+  background-color: #ECEFF1;
 }
 
 .scores {
@@ -50,12 +45,13 @@ th, td {
 }
 
 #main {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  /*background: url(http://i.imgur.com/OdlBKxC.gif) repeat top left scroll;*/
+  background-color: #ECEFF1;
 }
 
 #footer {
   text-align: center;
+}
+
+a {
+  text-decoration: none;
 }
