@@ -1,12 +1,12 @@
 <section id='header'>
-  <h2>ᕙ(๑ ⚈ै‿ ⚈ै๑)ᕗ</h2>
+  <h2>ᕙ(<span class='blush'>๑</span> ⚈ै‿ ⚈ै<span class='blush'>๑</span>)ᕗ</h2>
   <h1>Daum Fan Cafe Rankings</h1>
   <p id='updated'>Last updated: <%= @top.first.updated_at.strftime("%Y-%m-%d %I:%m%p %Z") %></p>
 </section>
 
 <section id='main'>
   <div class='paginate'>
-    <%= will_paginate @top %>
+    <%= will_paginate @top, :class => 'flickr_pagination' %>
   </div>
 
   <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
@@ -31,7 +31,7 @@
   </table>
 
   <div class='paginate'>
-    <%= will_paginate @top %>
+    <%= will_paginate @top, :class => 'flickr_pagination' %>
   </div>
 </section>
 
