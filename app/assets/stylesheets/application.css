@@ -42,7 +42,7 @@ table, th, td {
 }
 
 .scores {
-  text-align: center;
+  text-align: center !important;
 }
 
 #main {

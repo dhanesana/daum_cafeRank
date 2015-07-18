@@ -11,11 +11,15 @@
 
   <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
     <tr>
+      <th>Rank</th>
       <th class="mdl-data-table__cell--non-numeric">Cafe Name</th>
       <th>Members</th>
     </tr>
-  <% @top.each do |cafe| %>
+  <% @top.each_with_index do |cafe, index| %>
     <tr>
+      <td class='rank'>
+        <%= @top.offset + index + 1 %>
+      </td>
       <td class="mdl-data-table__cell--non-numeric">
         <a class="cafe-urls" href="<%= cafe.url %>" target="_blank"><%= cafe.title %></a>
       </td>
