@@ -3,6 +3,9 @@ require 'open-uri'
 page_num = 1
 
 while page_num < 251 # First 500 Pages
+  unless Cafe.last.nil?
+    break if Cafe.last.id > 9449
+  end
   item_num = 0
   page = Nokogiri::HTML(open("http://top.cafe.daum.net/_c21_/category_list?type=sub&page=#{page_num}&subcateid=85&cateid=5"))
   while item_num < 15
