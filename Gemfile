@@ -52,3 +52,4 @@ group :development, :test do
 end
 
 gem 'material_design_lite-rails'
+gem 'puma'
