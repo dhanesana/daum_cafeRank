@@ -2,7 +2,7 @@ require 'open-uri'
 
 page_num = 1
 
-while page_num < 5000 # First 5000 Pages
+while page_num < 500 # First 500 Pages
   unless Cafe.last.nil?
     break if Cafe.last.id > 9449
   end
@@ -19,6 +19,7 @@ while page_num < 5000 # First 5000 Pages
       @cafe.score = members
       @cafe.save
     else
+      # Must have 1000+ members
       Cafe.create(title: name, score: members, url: link) if members > 999
     end
     item_num += 1
