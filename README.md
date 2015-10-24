@@ -1,4 +1,4 @@
-[daum_cafeRank](http://www.acecprsd.com/) - Daum music fan cafes ordered by most to least members (registered followers).
+[daum_cafeRank](http://daumcafe.herokuapp.com/) - Daum music fan cafes ordered by most to least members (registered followers).
 =====================================
 
 Description
