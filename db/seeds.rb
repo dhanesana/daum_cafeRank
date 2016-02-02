@@ -13,7 +13,7 @@ while page_num < 500 # First 500 Pages
     link = page.css('td.cafename')[item_num].css('a').first['href']
     members = page.css('td.member')[item_num].text.gsub(/,/, '').to_f
     # members = 0 if members < 1
-    @cafe = Cafe.where(title: name).first
+    @cafe = Cafe.where(url: link).first
     if @cafe
       @cafe.url = link
       @cafe.score = members
